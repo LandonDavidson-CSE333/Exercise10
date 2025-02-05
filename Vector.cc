@@ -65,12 +65,14 @@ namespace vector333 {
 
   std::ostream& operator<<(std::ostream &out, const Vector &src) {
     // Print in the format "(x,y,z)"
-    out << "(" << src.coords_[0] << "," << src.coords_[1] << "," << src.coords_[2] << ")";
+    out << "(" << src.coords_[0] << ","
+        << src.coords_[1] << "," << src.coords_[2] << ")";
     return out;
   }
 
   Vector operator*(const Vector &a, double b) {
-    // Store each coord of a multiplied by b and return them inside a Vector object tmp
+    // Store each coord of a multiplied by b and
+    // return them inside a Vector object tmp
     double x = a.coords_[0] * b;
     double y = a.coords_[1] * b;
     double z = a.coords_[2] * b;
@@ -79,7 +81,8 @@ namespace vector333 {
   }
 
   Vector operator*(double a, const Vector &b) {
-    // Store each coord of b multiplied by a and return them inside a Vector object tmp
+    // Store each coord of b multiplied by a and
+    // return them inside a Vector object tmp
     double x = b.coords_[0] * a;
     double y = b.coords_[1] * a;
     double z = b.coords_[2] * a;
@@ -108,4 +111,4 @@ namespace vector333 {
     return tmp;
   }
 
-} // vector333
+}  // namespace vector333

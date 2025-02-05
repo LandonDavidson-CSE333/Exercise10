@@ -32,16 +32,17 @@ class Vector {
   friend Vector operator*(double a, const Vector &b);
   // Return the dot product of a * b
   friend double operator*(const Vector &a, const Vector &b);
+
  private:
   double *coords_ = nullptr;
-}; // Vector
+};  // Vector
 
- // Return a new vector with coords[i] = a.coords[i] + b.coords[i]
- Vector operator+(const Vector &a, const Vector &b);
- // Return a new vector with coords[i] = a.coords[i] - b.coords[i]
- Vector operator-(const Vector &a, const Vector &b);
+  // Return a new vector with coords[i] = a.coords[i] + b.coords[i]
+  Vector operator+(const Vector &a, const Vector &b);
+  // Return a new vector with coords[i] = a.coords[i] - b.coords[i]
+  Vector operator-(const Vector &a, const Vector &b);
 
 
-} // vector333
+}  // namespace vector333
 
-#endif //VECTOR_H_
+#endif  // VECTOR_H_
